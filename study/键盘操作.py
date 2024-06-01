@@ -14,5 +14,7 @@ def test3():
     pyautogui.press('H')
     # 模拟键盘输入热键Enter
     pyautogui.press('Enter')
+
+def test4():pass
 if __name__ == '__main__':
     test3()

@@ -32,5 +32,14 @@ def test4():
     pyautogui.scroll(10)
     # 在(114,514)坐标向下滚动10单位量
     pyautogui.scroll(114, 514, -10)
+def test5():
+    #移动速度渐变
+    pyautogui.moveTo(100, 100, 2, pyautogui.easeInQuad)  # 开始很慢，不断加速
+    pyautogui.moveTo(100, 100, 2, pyautogui.easeOutQuad)  # 开始很快，不断减速
+    pyautogui.moveTo(100, 100, 2, pyautogui.easeInOutQuad)  # 开始和结束都快，中间比较慢
+    pyautogui.moveTo(100, 100, 2, pyautogui.easeInBounce)  # 一步一徘徊前进
+    pyautogui.moveTo(100, 100, 2, pyautogui.easeInElastic)  # 徘徊幅度更大，甚至超过起点和终点
+
+
 if __name__ == '__main__':
     test4()
